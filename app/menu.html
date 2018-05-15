@@ -1,0 +1,62 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION))
+	{
+		header('location:loginEstudiante.php');
+		exit;
+	}
+?>
+<hmtl lang="es">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../includes/css/bootstrap.min.css">
+    <title>Censo de Matricula</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="../index.php">Sistema de Matricula</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="loginEstudiante.php">Primer Ingreso</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sistema de Pregrado</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="loginEstudiante.php">Estudiante</a>
+                  <a class="dropdown-item" href="loginProfesor.php">Profesor</a>
+                  <a class="dropdown-item" href="loginAdmin.php">Administrador</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cerrarSesion.php">Cerrar Sesion</a>
+              </li>
+            </ul>
+            </ul>
+          </div>
+        </nav>
+        <br>
+    <br><br>
+    <p>
+      <a href="../datatable/verProgramacion.php">Ver Programacion Academica</a> &nbsp;Ver las clases disponibles de este periodo academico
+    </p>
+    <br><br>
+    <p><a href="../datatable/AgregarClases/agregarClases.php" >Agregar Asignatura</a>  &nbsp;&nbsp;&nbsp; Agregar clases para el periodo Academico</p>
+		<br><br>
+    <p><a href="../datatable/mostrarClases/mostrarClases.php" >Mostrar Asignaturas</a>  &nbsp;&nbsp;&nbsp; Ver clases matriculadas para el periodo Academico</p>
+		<br><br>
+    <p><a href="../datatable/cancelarClase/cancelarClases.php" >Cancelar Asignatura</a>  &nbsp;&nbsp;&nbsp; Cancelar clases para el periodo Academico</p>
+
+    </body>
+    <script type="text/javascript" src="../includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../includes/js/bootstrap.min.js"></script>
+
+</hmtl>
